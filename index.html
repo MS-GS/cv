@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Professional CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2a2a72;
+            --secondary-color: #009ffd;
+            --accent-color: #7b2cbf;
+            --background-gradient: linear-gradient(45deg, #f8f9fa, #e9ecef);
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--background-gradient);
+            color: #2d3436;
+        }
+
+        .cv-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 2rem;
+            position: relative;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .skill-badge {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .download-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                margin: 1rem;
+            }
+            
+            .header {
+                padding: 2rem 1rem;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cv-container">
+    <!-- Header Section -->
+    <header class="header text-center">
+        <!-- Profile Photo -->
+        <img src="https://via.placeholder.com/150" class="profile-img" alt="Profile Photo">
+        <h1 class="display-4 fw-bold mb-3">John Doe</h1>
+        <p class="lead mb-0">Senior Full Stack Developer</p>
+        <div class="social-icons mt-3">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <!-- Download Button -->
+        <a href="#" class="btn download-btn mt-3">
+            <i class="fas fa-download me-2"></i>Download CV
+        </a>
+    </header>
+
+    <div class="row g-4 p-4">
+        <!-- Left Column -->
+        <div class="col-lg-4">
+            <!-- Contact Info -->
+            <section class="mb-5">
+                <h3 class="section-title">Contact</h3>
+                <ul class="list-unstyled">
+                    <li class="mb-3">
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:john.doe@email.com" class="contact-link">john.doe@email.com</a>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-phone me-2"></i>
+                        <a href="tel:+1234567890" class="contact-link">+1 (234) 567-890</a>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        New York, USA
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Skills -->
+            <section class="mb-5">
+                <h3 class="section-title">Skills</h3>
+                <div class="d-flex flex-wrap">
+                    <span class="skill-badge">React.js</span>
+                    <span class="skill-badge">Node.js</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">AWS</span>
+                    <span class="skill-badge">Docker</span>
+                    <span class="skill-badge">MongoDB</span>
+                    <span class="skill-badge">GraphQL</span>
+                    <span class="skill-badge">TypeScript</span>
+                </div>
+            </section>
+
+            <!-- Languages -->
+            <section class="mb-5">
+                <h3 class="section-title">Languages</h3>
+                <p class="mb-2">English (Fluent)</p>
+                <div class="progress mb-3" style="height: 8px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 100%"></div>
+                </div>
+                <p class="mb-2">Spanish (Intermediate)</p>
+                <div class="progress mb-3" style="height: 8px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 70%"></div>
+                </div>
+                <p class="mb-2">French (Basic)</p>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 40%"></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-lg-8">
+            <!-- Experience -->
+            <section class="mb-5">
+                <h3 class="section-title">Experience</h3>
+                <div class="timeline-item">
+                    <h4 class="h5 mb-1">Senior Full Stack Developer</h4>
+                    <p class="text-muted mb-2">Tech Corp Inc. | 2019 - Present</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Led development of enterprise SaaS platform</li>
+                        <li class="mb-2">Implemented microservices architecture</li>
+                        <li>Improved system performance by 40%</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4 class="h5 mb-1">Full Stack Developer</h4>
+                    <p class="text-muted mb-2">Innovate Solutions | 2016 - 2019</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Developed REST APIs for mobile applications</li>
+                        <li class="mb-2">Implemented CI/CD pipelines</li>
+                        <li>Mentored junior developers</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="mb-5">
+                <h3 class="section-title">Education</h3>
+                <div class="timeline-item">
+                    <h4 class="h5 mb-1">MSc Computer Science</h4>
+                    <p class="text-muted mb-2">Stanford University | 2014 - 2016</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 class="h5 mb-1">BSc Software Engineering</h4>
+                    <p class="text-muted mb-2">MIT | 2010 - 2014</p>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section>
+                <h3 class="section-title">Projects</h3>
+                <div class="card mb-3 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">E-commerce Platform</h5>
+                        <p class="card-text">Built scalable e-commerce solution using MERN stack</p>
+                        <a href="#" class="btn btn-sm btn-primary">View Project</a>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">AI Chat Application</h5>
+                        <p class="card-text">Developed NLP-powered chat interface using Python</p>
+                        <a href="#" class="btn btn-sm btn-primary">View Project</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
